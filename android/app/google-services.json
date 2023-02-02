@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "123496717063",
+    "project_id": "fir-notificaciones-e684a",
+    "storage_bucket": "fir-notificaciones-e684a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123496717063:android:b8d6dca8e8f6eb2a7083a2",
+        "android_client_info": {
+          "package_name": "com.arlysenrique.notificaciones"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123496717063-ma0eieg46rgokvc56j6jjhqd6uaaa487.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arlysenrique.notificaciones",
+            "certificate_hash": "e7f253f73beef1191a3bcfcadf2f819ba09a1892"
+          }
+        },
+        {
+          "client_id": "123496717063-lpidflqbg228ldj24tclesavst8t4o04.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuzZJEZs5oyurxM2DivrgGdL9R9P6UC_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123496717063-lpidflqbg228ldj24tclesavst8t4o04.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
