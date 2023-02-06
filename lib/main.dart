@@ -8,7 +8,7 @@ import 'package:notificaciones/services/push_notification_service.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await PushNotificationService.initializeApp();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -28,18 +28,21 @@ class _MyAppState extends State<MyApp> {
     // TODO: implement initState
     super.initState();
 
-    //ya se tiene acceso al context
+    // PushNotificationService.messagesStream.listen((message) {
+    //   // print('From main.dart');
+    //   // print(message.toString());
+    //   // navigatorKey.currentState?.pushNamed(
+    //   //   message['route'],
+    //   //   arguments: message,
+    //   // );
 
-    PushNotificationService.messageStream.listen((message) {
-      // print('MyApp: $message');
-
-      //navigatorKey.currentState?.pushNamed('message', arguments: message);
-      navigatorKey.currentState?.pushNamed('reservation', arguments: message);
-
-      final snackBar = SnackBar(content: Text(message));
-
-      messengerKey.currentState?.showSnackBar(snackBar);
-    });
+    //   print('From main.dart');
+    //   print(message.toString());
+    //   navigatorKey.currentState?.pushNamed(
+    //     message.keys.first,
+    //     arguments: message,
+    //   );
+    // });
   }
 
   @override

@@ -4,32 +4,36 @@ import 'dart:async';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:notificaciones/screens/message_screen.dart';
 
 class PushNotificationService {
   static FirebaseMessaging messaging = FirebaseMessaging.instance;
   static String? token;
-  static StreamController<String> _messageStream = StreamController
-      .broadcast(); //<el StreamController puede ser String, mapa, lista>
-
-  static Stream<String> get messageStream => _messageStream.stream;
+  static final StreamController<Map<String, dynamic>> _messageStream =
+      StreamController.broadcast();
+  static Stream<Map<String, dynamic>> get messagesStream =>
+      _messageStream.stream;
 
   static Future _backgroundHandler(RemoteMessage message) async {
-    //print('onBackground Handler ${message.messageId} ');
-    print(message.data);
-    _messageStream.add(message.data['product'] ?? 'no data');
+    print('onBackground Handler ${message.messageId} ');
+    // print('From push_notification_service.dart');
+    // print(message.data);
+    // _messageStream.add(message.data);
   }
 
   static Future _onMessageHandler(RemoteMessage message) async {
-    //print('onMessage Handler ${reservati} ');
-    print(message.data);
-    _messageStream.add(message.data['product'] ?? 'no data');
+    print('onMessage Handler ${message.messageId} ');
+    // print(message.data);
+    // _messageStream.add(message.data['product'] ?? 'no data');
+    // print('From push_notification_service.dart');
+    // print(message.data);
+    // _messageStream.add(message.data);
   }
 
   static Future _onMessageOpenApp(RemoteMessage message) async {
-    //print('onMessageOpenApp Handler ${message.messageId} ');
-    print(message.data);
-    _messageStream.add(message.data['product'] ?? 'no data');
+    print('onMessageOpenApp Handler ${message.messageId} ');
+    // print('From push_notification_service.dart');
+    // print(message.data);
+    // _messageStream.add(message.data);
   }
 
   static Future initializeApp() async {

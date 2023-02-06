@@ -13,7 +13,8 @@ class RequiredActionScreen extends StatelessWidget {
         title: const Text('Required Action'),
       ),
       body: Center(
-        child: Text('$args', style: const TextStyle(fontSize: 29)),
+        child: Text('Required Action : $args',
+            style: const TextStyle(fontSize: 29)),
       ),
     );
   }
